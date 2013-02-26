@@ -1,0 +1,17 @@
+body {
+  background: #eee;
+  margin: 0 15px;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 22px;
+}
+
+input[type='search'] {
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
+  color: #999;
+}
