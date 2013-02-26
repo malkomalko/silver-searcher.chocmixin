@@ -1,0 +1,14 @@
+{
+  "name": "silver-searcher.chocmixin",
+  "version": "0.0.1",
+  "description": "Silver Searcher integration for Chocolat",
+  "main": "init.js",
+  "keywords": [
+    "chocolat"
+  ],
+  "author": "Robert Malko <robmalko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "*"
+  }
+}
