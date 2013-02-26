@@ -9,6 +9,6 @@
   "author": "Robert Malko <robmalko@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "underscore": "*"
+    "underscore": "1.4.4"
   }
 }
