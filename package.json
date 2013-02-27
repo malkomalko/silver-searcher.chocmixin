@@ -9,6 +9,7 @@
   "author": "Robert Malko <robmalko@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "applescript": "0.2.1",
     "underscore": "1.4.4"
   }
 }
