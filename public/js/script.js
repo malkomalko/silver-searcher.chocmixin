@@ -1,3 +1,6 @@
+var emit = chocolat.sendMessage
+  , on   = chocolat.onMessage
+
 $(window).ready(function(){
   var searchBox = $("input[type='search']")
 
@@ -7,7 +10,7 @@ $(window).ready(function(){
     var keycode = (event.keyCode ? event.keyCode : event.which)
 
     if (keycode === 13) { // enter
-      chocolat.sendMessage("search", [searchBox.val()])
+      emit("search", [searchBox.val()])
     }
   })
 })
