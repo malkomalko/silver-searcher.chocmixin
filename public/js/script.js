@@ -1,6 +1,8 @@
 var emit = chocolat.sendMessage
   , on   = chocolat.onMessage
 
+var listView
+
 $(window).ready(function(){
   var searchBox = $("input[type='search']")
 
@@ -16,11 +18,15 @@ $(window).ready(function(){
 })
 
 function searchResults(results){
-  var el = $("#results")
+  if (listView) listView.remove()
+  listView = new infinity.ListView($("#results"))
 
-  el.html("")
+  results.forEach(function(result, i){
+    var oddOrEven = i % 2 == 0 ? "even" : "odd"
 
-  results.forEach(function(result){
-    el.append("<li>" + result + "</li>")
+    listView.append(
+      "<div class='search-result " + oddOrEven + "'>" +
+        result +
+      "</div>")
   })
 }
