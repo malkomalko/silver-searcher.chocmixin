@@ -14,3 +14,13 @@ $(window).ready(function(){
     }
   })
 })
+
+function searchResults(results){
+  var el = $("#results")
+
+  el.html("")
+
+  results.forEach(function(result){
+    el.append("<li>" + result + "</li>")
+  })
+}
