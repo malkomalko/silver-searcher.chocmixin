@@ -30,12 +30,16 @@ function searchResults(results){
       , lines = _.compact(result.split("\n"))
       , listItems = ""
 
-    lines.forEach(function(line){
+    lines.forEach(function(line, j){
       line = line.replace(/</gi, "&lt;")
                  .replace(/>/gi, "&gt;")
                  .replace(re, wrappedTerm)
                  .substr(0, 100)
-      listItems += "<pre>" + line + "</pre>"
+      if (j == 0) {
+        listItems += "<pre class='file'>" + line + "</pre>"
+      } else {
+        listItems += "<pre>" + line + "</pre>"
+      }
     })
 
     listView.append(

@@ -49,7 +49,7 @@ input[type='search'] {
 }
 
 .search-result.even {
-  background: -webkit-linear-gradient(top, rgba(225,237,244,1) 0%, rgba(225,237,244,.6) 100%);
+  background: -webkit-linear-gradient(top, rgba(225,237,244,.4) 0%, rgba(225,237,244,.3) 100%);
 }
 
 .search-result pre {
@@ -61,15 +61,16 @@ span.hl {
   background-color: #ffff00;
 }
 
-.search-result.odd pre {
-  border-bottom: 1px solid #ddd;
-}
-.search-result.odd pre:nth-child(1) {
+.search-result pre.file {
   font-size: 14px;
   font-weight: 700;
   text-decoration: underline;
   border: 0;
 }
+.search-result.odd pre {
+  border-bottom: 1px solid #ddd;
+}
+.search-result.odd pre:nth-child(1),
 .search-result.odd pre:last-child {
   border: 0;
 }
@@ -77,12 +78,7 @@ span.hl {
 .search-result.even pre {
   border-bottom: 1px solid #aaa;
 }
-.search-result.even pre:nth-child(1) {
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: underline;
-  border: 0;
-}
+.search-result.even pre:nth-child(1),
 .search-result.even pre:last-child {
   border: 0;
 }
