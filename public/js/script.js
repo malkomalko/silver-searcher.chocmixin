@@ -23,12 +23,15 @@ function searchResults(results){
 
   results.forEach(function(result, i){
     var oddOrEven = i % 2 == 0 ? "even" : "odd"
+      , lines = _.compact(result.split("\n"))
+      , listItems = ""
+
+    lines.forEach(function(line){
+      line = line.replace(/</gi, "&lt;").replace(/>/gi, "&gt;").substr(0, 100)
+      listItems += "<pre>" + line + "</pre>"
+    })
 
     listView.append(
-      "<div class='search-result " + oddOrEven + "'>" +
-        "<pre>" +
-        result.replace(/</gi, "&lt;").replace(/>/gi, "&gt;") +
-        "</pre>" +
-      "</div>")
+      "<div class='search-result " + oddOrEven + "'>" + listItems + "</div>")
   })
 }
