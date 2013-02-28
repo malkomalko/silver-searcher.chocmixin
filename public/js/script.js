@@ -26,6 +26,11 @@ $(window).ready(function(){
   })
 })
 
+function focusWindow(){
+  dom.searchBox.focus()
+  dom.searchBox.select()
+}
+
 function searchResults(results){
   if (dom.listView) dom.listView.remove()
 
