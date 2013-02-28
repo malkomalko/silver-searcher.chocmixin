@@ -15,17 +15,8 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  background: #FFF;
   border-bottom: 1px solid #ccc;
-
-  background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
   background-image: -webkit-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-  background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-  background-image: -o-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-  background-image: -ms-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-  background-image: linear-gradient(to bottom, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
-  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.75);
   box-shadow: 0 1px 5px rgba(0,0,0,0.75);
 }
 
@@ -64,6 +55,10 @@ input[type='search'] {
 .search-result pre {
   margin: 0;
   padding: 4px 0;
+}
+
+span.hl {
+  background-color: #ffff00;
 }
 
 .search-result.odd pre {

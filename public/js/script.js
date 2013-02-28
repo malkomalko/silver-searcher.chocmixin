@@ -1,10 +1,10 @@
 var emit = chocolat.sendMessage
   , on   = chocolat.onMessage
 
-var listView
+var dom = {}
 
 $(window).ready(function(){
-  var searchBox = $("input[type='search']")
+  var searchBox = dom.searchBox = $("input[type='search']")
 
   searchBox.focus()
 
@@ -18,8 +18,12 @@ $(window).ready(function(){
 })
 
 function searchResults(results){
-  if (listView) listView.remove()
-  listView = new infinity.ListView($("#results"))
+  if (dom.listView) dom.listView.remove()
+
+  var listView = dom.listView = new infinity.ListView($("#results"))
+    , searchTerm = dom.searchBox.val()
+    , wrappedTerm = "<span class='hl'>" + searchTerm + "</span>"
+    , re = new RegExp(searchTerm, "gi")
 
   results.forEach(function(result, i){
     var oddOrEven = i % 2 == 0 ? "even" : "odd"
@@ -27,7 +31,10 @@ function searchResults(results){
       , listItems = ""
 
     lines.forEach(function(line){
-      line = line.replace(/</gi, "&lt;").replace(/>/gi, "&gt;").substr(0, 100)
+      line = line.replace(/</gi, "&lt;")
+                 .replace(/>/gi, "&gt;")
+                 .replace(re, wrappedTerm)
+                 .substr(0, 100)
       listItems += "<pre>" + line + "</pre>"
     })
 
