@@ -54,11 +54,11 @@ input[type='search'] {
 }
 
 .search-result.odd {
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #fafafa 100%);
 }
 
 .search-result.even {
-  background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%, rgba(225,237,244,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(225,237,244,1) 0%, rgba(225,237,244,.6) 100%);
 }
 
 .search-result pre {
@@ -67,7 +67,7 @@ input[type='search'] {
 }
 
 .search-result.odd pre {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 .search-result.odd pre:nth-child(1) {
   font-weight: 700;
@@ -79,7 +79,7 @@ input[type='search'] {
 }
 
 .search-result.even pre {
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid #aaa;
 }
 .search-result.even pre:nth-child(1) {
   font-weight: 700;
