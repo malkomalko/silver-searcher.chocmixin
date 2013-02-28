@@ -26,7 +26,9 @@ function searchResults(results){
 
     listView.append(
       "<div class='search-result " + oddOrEven + "'>" +
-        result +
+        "<pre>" +
+        result.replace(/</gi, "&lt;").replace(/>/gi, "&gt;") +
+        "</pre>" +
       "</div>")
   })
 }

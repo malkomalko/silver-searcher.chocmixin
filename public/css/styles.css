@@ -46,10 +46,11 @@ input[type='search'] {
 }
 
 .search-result {
-  padding: 7px;
+  padding: 2px 7px;
   margin: 0px;
   border-bottom: 1px solid #bebebe;
   font-size: 13px;
+  word-wrap: break-word;
 }
 
 .search-result.odd {
