@@ -49,7 +49,7 @@ input[type='search'] {
   padding: 4px 7px;
   margin: 0px;
   border-bottom: 1px solid #ccc;
-  font-size: 12px;
+  font-size: 13px;
   word-wrap: break-word;
 }
 
@@ -70,6 +70,7 @@ input[type='search'] {
   border-bottom: 1px solid #ddd;
 }
 .search-result.odd pre:nth-child(1) {
+  font-size: 14px;
   font-weight: 700;
   text-decoration: underline;
   border: 0;
@@ -82,6 +83,7 @@ input[type='search'] {
   border-bottom: 1px solid #aaa;
 }
 .search-result.even pre:nth-child(1) {
+  font-size: 14px;
   font-weight: 700;
   text-decoration: underline;
   border: 0;
