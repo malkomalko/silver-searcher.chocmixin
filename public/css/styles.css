@@ -61,6 +61,11 @@ span.hl {
   background-color: #ffff00;
 }
 
+a.match {
+  margin-right: 8px;
+  color: #849A00;
+}
+
 .search-result pre.file {
   font-size: 14px;
   font-weight: 700;

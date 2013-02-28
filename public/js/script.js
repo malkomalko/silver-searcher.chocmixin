@@ -15,6 +15,15 @@ $(window).ready(function(){
       emit("search", [searchBox.val()])
     }
   })
+
+  $("body").on("click", "a.match", function(event){
+    var el = $(event.target)
+      , line = el.data("line").toString()
+      , col = el.data("col").toString()
+      , file = el.closest(".search-result").find("pre.file").html()
+
+    emit("searchClick", [file, line, col])
+  })
 })
 
 function searchResults(results){
@@ -35,10 +44,23 @@ function searchResults(results){
                  .replace(/>/gi, "&gt;")
                  .replace(re, wrappedTerm)
                  .substr(0, 100)
+
       if (j == 0) {
         listItems += "<pre class='file'>" + line + "</pre>"
       } else {
-        listItems += "<pre>" + line + "</pre>"
+        var matchedLine = line.match(/^(\d+);(\d+).+\d+:(.+)$/)
+          , lineNumber = matchedLine[1]
+          , columnNumber = matchedLine[2]
+          , foundMatch = matchedLine[3].trim()
+
+        listItems += "<pre>" +
+                       "<a class='match' href='javascript:;' data-line='" +
+                         lineNumber +
+                         "' data-col='" +
+                         columnNumber +
+                         "'>" + lineNumber + ":" + columnNumber + "</a>" +
+                       foundMatch +
+                     "</pre>"
       }
     })
 
