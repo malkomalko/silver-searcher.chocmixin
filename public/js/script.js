@@ -45,14 +45,14 @@ function searchResults(results){
       , listItems = ""
 
     lines.forEach(function(line, j){
-      line = line.replace(/</gi, "&lt;")
-                 .replace(/>/gi, "&gt;")
-                 .replace(re, wrappedTerm)
-                 .substr(0, 100)
-
       if (j == 0) {
         listItems += "<pre class='file'>" + line + "</pre>"
       } else {
+        line = line.replace(/</gi, "&lt;")
+                   .replace(/>/gi, "&gt;")
+                   .replace(re, wrappedTerm)
+                   .substr(0, 100)
+
         var matchedLine = line.match(/^(\d+);(\d+).+\d+:(.+)$/)
           , lineNumber = matchedLine[1]
           , columnNumber = matchedLine[2]
